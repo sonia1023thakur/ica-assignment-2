@@ -1,0 +1,5 @@
+### Reflection
+
+My decisions differed significantly from the AI's default suggestions. The AI aggressively recommended using `.dropna()` to remove the missing Pulse C price and suggested forcing a numeric conversion that would have permanently erased the "1,250" entry by turning it into another NaN. I rejected these automated fixes. My manual approach was better supported because retaining the `NaN` honestly reflects that the store was checked but the price failed to record, and stripping the comma from "1,250" preserved valid numerical data. As the assignment notes, a clean-looking table with undocumented changes is much worse than a messy honest one[cite: 4].
+
+On the other hand, without the AI acting as a tool to quickly generate frequency counts and filter the dataset, I likely would have missed the mislabeled entry at Index 40. I knew every item should appear exactly 24 times (12 weeks × 2 cities), but using the AI to output the specific counts (showing Oil B at 25 and Staple A at 23) allowed me to immediately pinpoint the human error and re-label the observation correctly.
